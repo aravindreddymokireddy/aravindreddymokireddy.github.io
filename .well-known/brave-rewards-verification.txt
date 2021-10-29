@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: armr.tech
-Token: 68dbb080abf5b20c6c8faa38e91cd83fcfa470f3e8b037abc1bd2180810ee559
