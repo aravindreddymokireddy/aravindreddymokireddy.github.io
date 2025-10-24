@@ -1,0 +1,177 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 20px 0 0;
+}
+
+.header.active {
+    position: fixed;
+    top: 35px;
+    padding: 20px 15px;
+}
+
+.header.active .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.navToggler {
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+    z-index: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.navToggler.hide {
+    opacity: 0;
+    transition: none;
+}
+
+.navToggler span {
+    height: 2px;
+    width: 24px;
+    background-color: var(--main-color);
+    position: relative;
+    transform: background-color 0.3s ease;
+}
+
+.header.active .navToggler span {
+    background-color: transparent;
+}
+
+.navToggler span::before,
+.navToggler span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    transition: all 0.3s ease;
+}
+
+.navToggler span::before {
+    left: 0;
+    transform: translateY(-8px);
+}
+
+.header.active .navToggler span::before {
+    transform: rotate(45deg);
+}
+
+.navToggler span::after {
+    right: 0;
+    transform: translateY(8px);
+}
+
+.header.active .navToggler span::after {
+    transform: rotate(-45deg);
+}
+
+.header:not(.active) .navToggler:hover span::before,
+.header:not(.active) .navToggler:hover span::after {
+    width: 50%;
+}
+
+.nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 35px 15px;
+    overflow-y: auto;
+    visibility: hidden;
+}
+
+.header.active .nav {
+    visibility: visible;
+}
+
+.navInner {
+    min-height: calc(100vh - 70px);
+    background-color: var(--white-alpha-25);
+    max-width: 1200px;
+    margin: auto;
+    border: 1px solid var(--white-alpha-40);
+    backdrop-filter: var(--backgrop-filter-blur);
+    padding: 50px 0;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.header.active .navInner {
+    opacity: 1;
+}
+
+.navInner ul li {
+    text-align: center;
+}
+
+.navInner ul li a {
+    font-size: 40px;
+    text-transform: capitalize;
+    color: var(--blue-dark);
+    display: block;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.navInner ul li a::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+    width: 0%;
+    background-color: var(--white-alpha-25);
+    z-index: -1;
+    transition: width 0.5s ease;
+}
+
+.navInner ul li a:hover::before {
+    width: 100%;
+}
+
+.navInner ul li a:hover {
+    color: var(--main-color);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    z-index: 200;
+    visibility: hidden;
+}
+
+.overlay.active {
+    visibility: visible;
+}
+
+@media(max-width:575px) {
+    .navInner ul li a {
+        font-size: 35px;
+    }
+}

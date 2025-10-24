@@ -1,0 +1,145 @@
+.aboutImg {
+    width: 40%;
+    padding: 0 15px;
+}
+
+.aboutText {
+    width: 60%;
+    padding: 0 15px
+}
+
+.aboutImg .imgBox {
+    background-color: var(--white-alpha-25);
+    max-width: 380px;
+    border: 1px solid var(--white-alpha-40);
+    margin: auto;
+    border-radius: 10px;
+}
+
+.aboutImg .imgBox img {
+    width: 100%;
+}
+
+.aboutText h3 {
+    text-transform: capitalize;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.aboutText .skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aboutText .skillItem {
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    padding: 5px 15px;
+    text-transform: capitalize;
+    margin: 0 10px 10px 0;
+    border-radius: 20px;
+}
+
+.aboutTab {
+    margin-top: 20px;
+}
+
+.aboutTab .tabItems {
+    padding: 2px 0;
+    background-color: transparent;
+    border: none;
+    text-transform: capitalize;
+    display: inline-block;
+    color: var(--blue-dark);
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    margin: 0 30px 0 0;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.aboutTab .tabItems:last-child {
+    margin: 0;
+}
+
+.aboutTab .tabItems.active {
+    color: var(--main-color);
+    opacity: 1;
+    cursor: auto;
+}
+
+.aboutText .timeline {
+    position: relative;
+}
+
+.aboutText .timeline::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    top: 0;
+    left: 5px;
+    background-color: var(--main-color);
+}
+
+.aboutText .tabContent {
+    padding: 40px 0;
+    display: none;
+}
+
+.aboutText .tabContent.active {
+    display: block;
+}
+
+.aboutText .timelineItem {
+    margin-bottom: 30px;
+    position: relative;
+    padding: 10px 0 0 40px;
+}
+
+.aboutText .timelineItem::before {
+    content: '';
+    position: absolute;
+    height: 11px;
+    width: 11px;
+    background-color: var(--main-color);
+    left: 0;
+    top: 16px;
+    border-radius: 50%;
+}
+
+.aboutText .timelineItem:last-child {
+    margin-bottom: 0;
+}
+
+.aboutText .timelineItem .date {
+    display: block;
+    color: var(--main-color);
+    font-weight: 400;
+    margin: 0 0 10px;
+}
+
+.aboutText .timelineItem h4 {
+    font-size: 18px;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+}
+
+.aboutText .timelineItem h4 span {
+    font-weight: 400;
+}
+
+.aboutText .btn {
+    margin: 0 15px 15px 0;
+}
+
+@media(max-width:767px) {
+    .aboutText,
+    .aboutImg {
+        width: 100%;
+    }
+    .aboutText {
+        margin-top: 30px;
+    }
+}
