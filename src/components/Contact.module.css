@@ -1,0 +1,86 @@
+.contactForm,
+.contactInfo {
+    width: 50%;
+    padding: 0 15px;
+}
+
+.contactForm .inputGroup {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.contactForm .inputControl::placeholder {
+    color: var(--blue-dark);
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+.contactForm .inputControl {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    font-family: inherit;
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: var(--white-alpha-25);
+    padding: 0 20px;
+    color: var(--blue-dark);
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.contactForm .inputControl:focus {
+    border-color: var(--white-alpha-40);
+}
+
+.contactForm textarea.inputControl {
+    height: 120px;
+    resize: none;
+    padding-top: 15px;
+}
+
+.contactInfoItem {
+    margin: 0 0 30px;
+    padding: 0 0 0 20px;
+}
+
+.contactInfoItem h3 {
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 0 0 5px;
+}
+
+.contactInfoItem .socialLinks a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    color: var(--main-color);
+    border-radius: 50%;
+    margin: 6px 4px 0 0;
+    transition: all 0.3s ease;
+}
+
+.contactInfoItem .socialLinks a:hover {
+    color: var(--white);
+    background-color: var(--main-color);
+}
+
+@media(max-width:767px) {
+    .contactForm,
+    .contactInfo {
+        width: 100%;
+    }
+    .contactInfo {
+        order: -1;
+        margin-bottom: 15px;
+    }
+    .contactInfoItem {
+        padding: 0;
+    }
+}

@@ -1,0 +1,137 @@
+.portfolioSection {
+    padding-bottom: 50px;
+}
+
+.portfolioItem {
+    width: calc((100% / 3) - 30px);
+    margin: 0 15px 30px;
+}
+
+.portfolioItem h3 {
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 20px 0;
+}
+
+.portfolioItemThumbnail {
+    padding: 10px;
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    border-radius: 10px;
+}
+
+.portfolioItemThumbnail img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.portfolioItemDetails {
+    display: none;
+}
+
+.portfolioPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 200;
+    visibility: hidden;
+}
+
+.portfolioPopup.open {
+    visibility: visible;
+    overflow-y: auto;
+}
+
+.ppInner {
+    min-height: 100vh;
+    padding: 40px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ppContent {
+    background-color: var(--white-alpha-25);
+    padding: 30px;
+    border-radius: 30px;
+    max-width: 900px;
+    width: 100%;
+    border: 1px solid var(--white-alpha-40);
+    backdrop-filter: var(--backgrop-filter-blur);
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.portfolioPopup.open .ppContent {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.5s ease-in-out;
+}
+
+.ppHeader {
+    position: relative;
+}
+
+.ppHeader .btn {
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -40px;
+    top: -40px;
+}
+
+.ppThumbnail img {
+    border-radius: 10px;
+}
+
+.ppHeader h3 {
+    font-size: 25px;
+    text-transform: capitalize;
+    margin: 20px 0 15px;
+}
+
+.ppBody .description {
+    margin-bottom: 20px;
+}
+
+.ppBody .generalInfo li {
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.ppBody .generalInfo li span {
+    font-weight: 300;
+}
+
+.ppBody .generalInfo li a {
+    text-transform: lowercase;
+    color: var(--main-color);
+}
+
+@media(max-width:1032px) {
+    .portfolioItem {
+        width: calc(50% - 30px);
+    }
+}
+
+@media(max-width:767px) {
+    .portfolioItem {
+        width: calc(100% - 30px);
+    }
+    .ppInner {
+        padding: 30px 15px;
+    }
+}
+
+@media(max-width:575px) {
+    .ppHeader h3 {
+        font-size: 20px;
+    }
+}
